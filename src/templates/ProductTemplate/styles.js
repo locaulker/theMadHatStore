@@ -16,3 +16,21 @@ export const Grid = styled.section`
     }
   }
 `;
+
+export const SelectWrapper = styled.div`
+  margin-top: 40px;
+  > strong {
+    display: block;
+    margin-bottom: 8px;
+  }
+  select {
+    padding: 0 5px 0 5px;
+    margin-right: 5px;
+  }
+`;
+
+export const Price = styled.div`
+  margin: 20px 0;
+  font-weight: 300;
+  font-size: 24px;
+`;

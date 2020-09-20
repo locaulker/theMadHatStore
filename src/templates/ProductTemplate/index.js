@@ -30,7 +30,7 @@ export const query = graphql`
 export default function ProductTemplate(props) {
   const { getProductById } = useContext(CartContext);
   const [product, setProduct] = useState(null);
-  const [selectedVariant, setSelectedVariant] = useState('');
+  const [selectedVariant, setSelectedVariant] = useState(null);
   const { search, origin, pathname } = useLocation();
 
   console.log(search, origin, pathname);
@@ -69,26 +69,28 @@ export default function ProductTemplate(props) {
           <p>{props.data.shopifyProduct.description}</p>
           {product?.availableForSale && !!selectedVariant && (
             <>
-              <SelectWrapper>
-                <strong>Variant</strong>
-                <select
-                  value={selectedVariant.id}
-                  onChange={handleVariantChange}
-                >
-                  {product?.variants.map(v => (
-                    <option key={v.id} value={v.id}>
-                      {v.title}
-                    </option>
-                  ))}
-                </select>
-              </SelectWrapper>
+              {product?.variants.length > 1 && (
+                <SelectWrapper>
+                  <strong>Variant</strong>
+                  <select
+                    value={selectedVariant.id}
+                    onChange={handleVariantChange}
+                  >
+                    {product?.variants.map(v => (
+                      <option key={v.id} value={v.id}>
+                        {v.title}
+                      </option>
+                    ))}
+                  </select>
+                </SelectWrapper>
+              )}
               {!!setSelectedVariant && <Price>${selectedVariant.price}</Price>}
             </>
           )}
         </div>
         <div>
           <ImageGallery
-            selectedVariantImageId={`selectedVariant?.image.id`}
+            selectedVariantImageId={selectedVariant?.image.id}
             images={props.data.shopifyProduct.images}
           />
         </div>

@@ -27,6 +27,10 @@ export const SelectWrapper = styled.div`
     padding: 0 5px;
     margin-right: 5px;
     outline: none;
+    border-bottom: 1px solid #999;
+    border-top: 1px solid #999;
+    border-left: 1px dashed transparent;
+    border-right: 1px dashed transparent;
   }
 `;
 

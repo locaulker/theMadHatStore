@@ -71,7 +71,7 @@ export default function ProductTemplate(props) {
             <>
               {product?.variants.length > 1 && (
                 <SelectWrapper>
-                  <strong>Variant</strong>
+                  <strong>Select Variant</strong>
                   <select
                     value={selectedVariant.id}
                     onChange={handleVariantChange}

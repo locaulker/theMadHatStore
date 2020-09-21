@@ -1,5 +1,5 @@
-import { createGlobalStyle } from "styled-components"
-import reset from "styled-reset"
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
 
 export const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px;
   }
   body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans Condensed', sans-serif;
     line-height: 1.2;
   }
   strong{
@@ -41,4 +41,4 @@ export const GlobalStyle = createGlobalStyle`
       list-style: disc;
     }
   }
-`
+`;

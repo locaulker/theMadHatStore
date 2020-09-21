@@ -17,7 +17,7 @@ export const CartHeader = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr 2fr 1fr 40px;
   border-bottom: 1px solid #ddd;
-  font-weight: 400;
+  font-weight: 600;
 
   > div {
     padding: 8px;
@@ -35,7 +35,8 @@ export const CartItem = styled.div`
 
     &:first-child {
       > div:first-child {
-        font-weight: bold;
+        font-weight: 600;
+        /* letter-spacing: 1px; */
       }
       > div:last-child {
         color: #999;

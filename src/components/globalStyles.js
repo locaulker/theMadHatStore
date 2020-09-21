@@ -8,7 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px;
   }
   body{
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Raleway', sans-serif;
     line-height: 1.2;
   }
   strong{

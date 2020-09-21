@@ -14,7 +14,7 @@ export function Cart() {
   }
   return (
     <CartWrapper>
-      <FaShoppingCart size="1.5em" color="#999" />
+      <FaShoppingCart size="1.1em" color="black" />
       <div>
         Items: {totalQuantity} / ${checkout?.totalPrice || '0.00'}
       </div>

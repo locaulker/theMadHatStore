@@ -10,12 +10,12 @@ export const CartWrapper = styled(StyledLink).attrs(() => ({
   text-decoration: none;
 
   > div:last-child {
-    padding: 8px;
+    padding-left: 8px;
     margin: auto 0;
   }
 
   &:hover {
     /* text-decoration: underline; */
-    color: blueviolet;
+    color: purple;
   }
 `;

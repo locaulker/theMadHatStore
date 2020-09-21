@@ -24,8 +24,9 @@ export const SelectWrapper = styled.div`
     margin-bottom: 8px;
   }
   select {
-    padding: 0 5px 0 5px;
+    padding: 0 5px;
     margin-right: 5px;
+    outline: none;
   }
 `;
 

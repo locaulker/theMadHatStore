@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Layout, SEO } from 'components';
+import ProductContext from 'context/ProductContext';
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to the Gatsby &amp; Shopify starter.</p>
-  </Layout>
-);
+const IndexPage = () => {
+  const { collections } = useContext(ProductContext);
+  console.log(collections);
+
+  return <Layout></Layout>;
+};
 
 export default IndexPage;

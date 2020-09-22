@@ -31,14 +31,15 @@ export const CollectionTileContent = styled.div`
 `;
 
 export const Title = styled.div`
-  padding: 5px 10px;
+  padding: 5px 50px;
   margin-right: 5px;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 54px;
+  font-size: 48px;
   font-weight: 300;
   letter-spacing: 2px;
-  border-radius: 36px;
+  line-height: 55px;
+  border-radius: 5px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
   background: ${props => (props.sale ? 'orangered' : 'none')};
 `;

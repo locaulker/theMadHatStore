@@ -10,3 +10,5 @@ export * from './Button';
 export * from './QuantityAdjuster';
 export * from './RemoveLineItem';
 export * from './HomepageCollectionsGrid';
+export * from './FeaturedProducts';
+export * from './ProductsGrid';

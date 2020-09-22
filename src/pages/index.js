@@ -1,5 +1,10 @@
 import React, { useContext } from 'react';
-import { Layout, SEO, HomepageCollectionsGrid } from 'components';
+import {
+  Layout,
+  SEO,
+  HomepageCollectionsGrid,
+  FeaturedProducts,
+} from 'components';
 import ProductContext from 'context/ProductContext';
 
 const IndexPage = () => {
@@ -13,6 +18,10 @@ const IndexPage = () => {
           collection => collection.title !== 'Featured Hats'
         )}
       />
+
+      {!!collections.find(
+        collection => collection.title === 'Featured Hats'
+      ) && <FeaturedProducts />}
     </Layout>
   );
 };

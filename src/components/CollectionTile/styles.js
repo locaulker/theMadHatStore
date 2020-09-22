@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const CollectionTileWrapper = styled.div`
-  height: 300px;
+  height: 400px;
   max-height: 100vh;
   display: flex;
   position: relative;
-  margin-bottom: 5px;
+  margin-bottom: 50px;
 
   > div {
     flex-grow: 1;
@@ -35,17 +35,21 @@ export const Title = styled.div`
   margin-right: 5px;
   display: inline-block;
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 54px;
   font-weight: 300;
   letter-spacing: 2px;
-  border-radius: 10px;
+  border-radius: 36px;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.75);
+  background: ${props => (props.sale ? 'orangered' : 'none')};
 `;
 
 export const Description = styled.div`
   font-size: 20px;
   letter-spacing: 1px;
-  text-transform: capitalize;
+  text-transform: normal;
   margin: 10px;
   border-radius: 10px;
+  padding: 5px 10px;
+  /* background: ${props => (props.sale ? 'orangered' : 'none')};
+  text-align: center; */
 `;

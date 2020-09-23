@@ -12,6 +12,7 @@ export function Filters() {
         <CategoryFilterItem
           title={collection.title}
           key={collection.shopifyId}
+          id={collection.shopifyId}
         />
       ))}
     </FiltersWrapper>

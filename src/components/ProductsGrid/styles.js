@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ProductsGridWrapper = styled.section`
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 15px;
   grid-template-columns: 1fr;
 
   @media (min-width: 384px) {

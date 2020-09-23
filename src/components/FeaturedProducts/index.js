@@ -11,7 +11,17 @@ export function FeaturedProducts() {
 
   return (
     <section>
-      <h1>Featured hats</h1>
+      <h1
+        style={{
+          textAlign: 'center',
+          margin: '2rem 0 3rem 0',
+          fontWeight: '100',
+          textTransform: 'uppercase',
+          letterSpacing: '6px',
+        }}
+      >
+        Featured
+      </h1>
       <ProductsGrid products={featuredCollection.products} />
     </section>
   );

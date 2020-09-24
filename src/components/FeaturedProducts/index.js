@@ -15,9 +15,10 @@ export function FeaturedProducts() {
         style={{
           textAlign: 'center',
           margin: '2rem 0 3rem 0',
-          fontWeight: '100',
+          fontWeight: '300',
           textTransform: 'uppercase',
-          letterSpacing: '6px',
+          letterSpacing: '3px',
+          fontSize: '42px',
         }}
       >
         Featured

@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import CartContext from 'context/CartContext';
-import { CartItem, CartHeader, CartFooter } from './styles';
+import { CartItem, CartHeader, CartFooter, Footer } from './styles';
 import { QuantityAdjuster } from '../QuantityAdjuster';
 import { RemoveLineItem } from '../RemoveLineItem';
+import { Button } from '../Button';
+import { navigate } from '@reach/router';
 
 export function CartContents() {
   const { checkout, updateLineItem } = useContext(CartContext);
@@ -14,21 +16,20 @@ export function CartContents() {
   return (
     <section>
       <h1 style={{ fontWeight: '100', textAlign: 'center' }}>Your Cart</h1>
-      <CartHeader>
-        <div>Product</div>
-        <div>Price</div>
-        <div>Quantity</div>
-        <div>Amount</div>
-      </CartHeader>
+      {!!checkout?.lineItems && (
+        <CartHeader>
+          <div>Product</div>
+          <div>Price</div>
+          <div>Quantity</div>
+          <div>Amount</div>
+        </CartHeader>
+      )}
       {checkout?.lineItems?.map(item => (
         <CartItem key={item.variant.id}>
           <div>
             <div>{item.title}</div>
             <div>
-              {item.variant.title === 'Default Title'
-                ? ''
-                : item.variant.textAlign}
-              {item.variant.title}
+              {item.variant.title === 'Default Title' ? '' : item.variant.title}
             </div>
           </div>
           <div>${item.variant.price}</div>
@@ -41,14 +42,37 @@ export function CartContents() {
           </div>
         </CartItem>
       ))}
-      <CartFooter>
+      {!!checkout?.lineItems && (
+        <CartFooter>
+          <div>
+            <strong>Total: </strong>
+          </div>
+          <div>
+            <span>${checkout?.totalPrice}</span>
+          </div>
+        </CartFooter>
+      )}
+      {!checkout?.lineItems && (
+        <h4 style={{ fontWeight: '300', textAlign: 'center' }}>
+          -- is Currently Empty --
+        </h4>
+      )}
+      <Footer>
         <div>
-          <strong>Total: </strong>
+          <Button onClick={() => navigate(-1)}>Continue Shopping</Button>
         </div>
         <div>
-          <span>${checkout?.totalPrice}</span>
+          {!!checkout?.webUrl && (
+            <Button
+              onClick={() => {
+                window.location.href = checkout.webUrl;
+              }}
+            >
+              Checkout
+            </Button>
+          )}
         </div>
-      </CartFooter>
+      </Footer>
     </section>
   );
 }

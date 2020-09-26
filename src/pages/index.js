@@ -9,7 +9,7 @@ import ProductContext from 'context/ProductContext';
 
 const IndexPage = () => {
   const { collections } = useContext(ProductContext);
-  console.log(collections);
+  // console.log(collections);
 
   return (
     <Layout>

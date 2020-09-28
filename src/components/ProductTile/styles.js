@@ -20,6 +20,13 @@ export const ProductTileWrapper = styled.div`
     color: black;
     text-transform: uppercase;
     word-spacing: 2px;
+    transition: all 0.6s linear;
+    cursor: pointer;
+
+    &:hover {
+      background: black;
+      color: white;
+    }
   }
 `;
 
